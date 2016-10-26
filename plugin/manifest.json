@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hate speech recognizer",
+  "description": "This extension recognizes hate speech on websites you visit",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["content.js"]
+  }],
+  "permissions": [
+   "activeTab"
+   ]
+}
